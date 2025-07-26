@@ -1,0 +1,20 @@
+/* This is conceptual CSS, you'd apply it via Theme UI or Emotion */
+aside ul {
+  list-style-type: none; /* Removes the bullets */
+  padding: 0;           /* Removes default left padding */
+  margin: 0;            /* Removes default top/bottom margin */
+}
+
+aside li {
+  margin-bottom: 8px; /* Add some space between list items */
+}
+
+aside li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333;           /* Default link color */
+  font-weight: bold;     /* Make text bold */
+}
+
+aside li a:hover {
+  color: #007bff;        /* Change color on hover */
+}
