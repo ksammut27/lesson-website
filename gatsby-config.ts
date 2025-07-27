@@ -19,6 +19,71 @@ const config: GatsbyConfig = {
   },
   trailingSlash: `always`,
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
+    {
+       resolve: `gatsby-plugin-local-search`,
+       options: {
+         name: `pages`,
+         engine: `flexsearch`,
+         engineOptions: {
+           encode: "icase",
+           tokenize: "forward",
+           async: false,
+         },
+         query: `
+           {
+             allMarkdownRemark {
+               nodes {
+                 id
+                 frontmatter {
+                   title
+                   date
+                   slug
+                 }
+                 rawMarkdownBody
+               }
+             }
+           }
+         `,
+         ref: `id`,
+         index: [`title`, `rawMarkdownBody`],
+         store: [`id`, `slug`, `title`, `date`],
+         normalizer: ({ data }) =>
+           data.allMarkdownRemark.nodes.map(node => ({
+             id: node.id,
+             slug: node.frontmatter.slug,
+             title: node.frontmatter.title,
+             date: node.frontmatter.date,
+             rawMarkdownBody: node.rawMarkdownBody,
+           })),
+       },
+     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          // REPLACE `gatsby-remark-mathjax` config with `gatsby-remark-katex`
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options here if needed.
+              // 'strict: `ignore`' is useful for allowing some non-standard LaTeX
+              // that KaTeX might otherwise flag as an error.
+              strict: `ignore`,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog_posts`,
+        path: `${__dirname}/src/blog_posts`,
+      },
+    },
     'gatsby-plugin-sass',
     {
       resolve: `@lekoarts/gatsby-theme-cara`,

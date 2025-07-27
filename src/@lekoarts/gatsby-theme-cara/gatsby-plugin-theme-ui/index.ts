@@ -50,8 +50,11 @@ const theme = merge(tailwind, {
       },
     },
   },
-  breakpoints: [`400px`, `600px`, `900px`, `1200px`, `1600px`],
+  // breakpoints: [`400px`, `600px`, `900px`, `1200px`, `1600px`],
   styles: {
+    div: {
+      overflow: `auto`
+    },
     root: {
       margin: 0,
       padding: 0,
@@ -80,6 +83,14 @@ const theme = merge(tailwind, {
       },
     },
     p: {
+      fontSize: [1, 2],
+      letterSpacing: `-0.003em`,
+      lineHeight: `body`,
+      "--baseline-multiplier": 0.179,
+      "--x-height-multiplier": 0.35,
+      color: `text`,
+    },
+    subtitle: {
       fontSize: [1, 2],
       letterSpacing: `-0.003em`,
       lineHeight: `body`,

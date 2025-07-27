@@ -1,4 +1,4 @@
-<p align="center">
+<!-- <p align="center">
   <a href="https://cara.lekoarts.de">
     <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-site-illustration.png" />
   </a>
@@ -112,4 +112,4 @@ To learn more about Gatsby themes specifically, I recommend checking out the [th
 
 Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Bluesky](https://bsky.app/profile/lekoarts.de) and share the project with me.
 
-Please star this project, share it on Social Media or consider supporting me on [GitHub Sponsors](https://github.com/sponsors/LekoArts)!
+Please star this project, share it on Social Media or consider supporting me on [GitHub Sponsors](https://github.com/sponsors/LekoArts)! -->

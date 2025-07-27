@@ -44,6 +44,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => {
     <Box as="button"
         onClick={toggleSidebar}
         sx={{
+          height: '45px', // Adjust height as needed
           position: 'fixed', // Position the button
           top: 3,            // Spacing from top
           left: 20,           // Spacing from left
@@ -55,8 +56,8 @@ const Layout = ({ children, className = `` }: LayoutProps) => {
           p: ['10px', '10px', '10px', '10px'], // Responsive padding
           borderRadius: '0px', // Rounded corners
           border: 'none',
-          fontSize: 24, // Font size
-          alignContent: 'center',
+          fontSize: 20, // Font size
+          alignItems: 'center',
           cursor: 'pointer',
           '&:hover': {
             opacity: 0.8,
@@ -75,6 +76,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => {
           document.documentElement.classList.value = `theme-ui-${next}`
         }}
         sx={{
+          height: '45px', // Adjust height as needed
           width: '160px', // Adjust width as needed
           position: 'fixed', // Position the button
           top: 3,            // Spacing from top
@@ -88,6 +90,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => {
           borderRadius: '0px', // Rounded corners
           border: 'none',
           fontSize: 20, // Font size
+          alignItems: 'center',
           cursor: 'pointer',
           '&:hover': {
             opacity: 0.8,

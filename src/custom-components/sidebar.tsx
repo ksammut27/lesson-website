@@ -23,7 +23,7 @@ function Sidebar({ isVisible }: SidebarProps) {
 
     // Filter out utility pages (like 404, /dev-404-page, etc.) and Cara's sections
     const validPages = data.allSitePage.nodes.filter(node => {
-        let UtilityPages = ['/404', '/dev-404-page', '/404.html'];
+        let UtilityPages = ['/404', '/dev-404-page', '/404.html', '/blog_post'];
         let isUtilityPage = false;
         for (let page of UtilityPages) {
             if (node.path.includes(page)) {
