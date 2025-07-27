@@ -70,6 +70,7 @@ const Blog = ({ data }) => {
                   link={"/blog_post/"+post.slug}
                   title={post.title}
                   date={post.date}
+                  bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
                 />)
               })}
             </div>
